@@ -17,10 +17,16 @@ Jeweler::Tasks.new do |gem|
   gem.name = "is_the_site_still_up"
   gem.homepage = "http://github.com/rjspotter/is_the_site_still_up"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "rjspotter@gmail.com"
-  gem.authors = ["R. Potter"]
+  gem.summary = %Q{Is the Site Still Up: A Middleware}
+  gem.description = <<DESC
+If you're building an application that has both online and offline functionality
+it can be useful to know if the site is really still up (because you can't rely on
+navigator.onLine).  This middleware allows you to poll /online or the path of your
+choice and return simple text or the result of a block without involving the whole
+application stack. Meaning, you can poll more frequently without melting your server.
+DESC
+  gem.email = "admin@byliner.com"
+  gem.authors = ["Byliner Inc."]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -31,10 +37,6 @@ RSpec::Core::RakeTask.new(:spec) do |spec|
   spec.pattern = FileList['spec/**/*_spec.rb']
 end
 
-RSpec::Core::RakeTask.new(:rcov) do |spec|
-  spec.pattern = 'spec/**/*_spec.rb'
-  spec.rcov = true
-end
 
 task :default => :spec
 
