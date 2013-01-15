@@ -1,6 +1,10 @@
 = is_the_site_still_up
 
-Description goes here.
+If you're building an application that has both online and offline functionality
+it can be useful to know if the site is really still up (because you can't rely on
+navigator.onLine).  This middleware allows you to poll /online or the path of your
+choice and return simple text or the result of a block without involving the whole
+application stack. Meaning, you can poll more frequently without melting your server.
 
 == Contributing to is_the_site_still_up
  
@@ -12,8 +16,12 @@ Description goes here.
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
+== Contributors
+
+* Randall Potter
+
 == Copyright
 
-Copyright (c) 2013 R. Potter. See LICENSE.txt for
+Copyright (c) 2013 Byliner Inc. See LICENSE.txt for
 further details.
 
